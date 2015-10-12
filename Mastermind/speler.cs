@@ -17,5 +17,7 @@ namespace Mastermind
         public string getNaam() {
             return naam;
         }
+
+
     }
 }

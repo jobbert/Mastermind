@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace Mastermind
 {
-    class speler
+    class Speler
     {
         private string naam;
 
-        public speler()
-        {
-
-        }
-
-        public speler(string naam) {
+        public Speler(string naam) {
             setNaam(naam);
         }
+
         public void setNaam(string naam) {
             this.naam = naam;
         

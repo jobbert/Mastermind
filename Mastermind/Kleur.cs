@@ -8,5 +8,6 @@ namespace Mastermind
 {
     class Kleur
     {
+        //kleur.cs
     }
 }

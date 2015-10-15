@@ -9,5 +9,6 @@ namespace Mastermind
 {
     class CheckDot : Label
     {
+        //CheckDot.cs ectended by label
     }
 }

@@ -10,8 +10,17 @@ namespace Mastermind
     {
         private string naam;
 
+        public speler()
+        {
+
+        }
+
+        public speler(string naam) {
+            setNaam(naam);
+        }
         public void setNaam(string naam) {
             this.naam = naam;
+        
         }
 
         public string getNaam() {

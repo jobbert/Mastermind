@@ -8,6 +8,7 @@ namespace Mastermind
 {
     class Kleur
     {
-        //kleur.cs
+        string[] colors = new string[6];
+
     }
 }

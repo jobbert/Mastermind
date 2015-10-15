@@ -8,6 +8,6 @@ namespace Mastermind
 {
     class Computer
     {
-        public string[] colorSequence;
+        string[] colorSequence = new string[6]; 
     }
 }

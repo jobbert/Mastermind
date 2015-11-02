@@ -10,7 +10,12 @@ namespace Mastermind
     {
         string[] colors = new string[6];
         string[] colors = {"", "", "", "", "", ""};
-        string kleur = "";
+        public string kleur = "";
+
+        public Kleur(int i)
+        {
+            setColor(i);
+        }
 
         public string setColor(int i)
         {

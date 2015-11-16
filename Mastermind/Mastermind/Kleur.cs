@@ -8,7 +8,7 @@ namespace Mastermind
 {
     class Kleur
     {
-        string[] colors = new string[6];
+        //string[] colors = new string[6];
         string[] colors = { "", "", "", "", "", "" };
         public string kleur = "";
 
@@ -17,7 +17,7 @@ namespace Mastermind
             setColor(i);
         }
 
-        public string setColor(int i)
+        public void setColor(int i)
         {
             kleur = this.colors[i];
         }

@@ -5,25 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Mastermind
-{
-    class Computer
-    {
+namespace Mastermind{
+    class Computer{
         private Random randomizer = new Random();
         public string[] colorSequence = new string[6];
+        public int number;
+        Kleur color;
 
-        
+        public Computer(){
+            color = new Kleur(number);
+        }
 
         public void setSequence() {
-            for(int i = 0; i < colorSequence.Length; i++)
-            {
-                //colorSequence[i] = 
+            for(int i = 0; i < colorSequence.Length; i++){
+                colorSequence[i] = color.getColor();
             }
         }
 
-        private int randomKleur() {
+        public void randomKleur() {
             int number = randomizer.Next(colorSequence.Length);
-            return number;
+            this.number = number;
         }
     }
 }

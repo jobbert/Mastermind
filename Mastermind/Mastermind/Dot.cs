@@ -14,6 +14,13 @@ namespace Mastermind
         private int y;
         private Size DOT_SIZE = new Size(20, 20);
         public Point position;
+        Kleur color;
+
+        public Dot(int number) {
+            Size grootte = DOT_SIZE;
+            color.setColor(number);
+        }
+
         public void setPosition(int x, int y){
             this.x = x; 
             this.y = y;

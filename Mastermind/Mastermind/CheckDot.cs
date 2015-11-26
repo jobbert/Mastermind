@@ -13,6 +13,13 @@ namespace Mastermind
         private int x;
         private int y;
         Point position;
+        
+        int number;
+        
+        public Checkdot(Kleur color, Point positie) {
+            color = new Kleur(number);
+            positie = position;
+        }
 
         public void setPosition(int x, int y)
         {
@@ -24,6 +31,10 @@ namespace Mastermind
         public Point getPosition()
         {
             return position;
+        }
+        
+        public bool ckeckPosition(Dot punt) {
+            return true;
         }
         
     }

@@ -9,7 +9,7 @@ namespace Mastermind
     class Kleur
     {
         //string[] colors = new string[6];
-        string[] colors = { "", "", "", "", "", "" };
+        string[] colors = { "black.png", "blue.png", "purple.png", "red.png", "white.png", "yellow.png" };
         public string kleur = "";
 
         public Kleur(int i)
@@ -17,13 +17,11 @@ namespace Mastermind
             setColor(i);
         }
 
-        public void setColor(int i)
-        {
+        public void setColor(int i){
             kleur = this.colors[i];
         }
 
-        public string getColor()
-        {
+        public string getColor(){
             return kleur;
         }
     }

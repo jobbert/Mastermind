@@ -21,7 +21,7 @@ namespace Mastermind{
                 colorSequence[i] = color.getColor();
             }
         }
-
+        
         public void randomKleur() {
             int number = randomizer.Next(colorSequence.Length);
             this.number = number;

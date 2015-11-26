@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace Mastermind
 {
-    class beurt
+    class Beurt
     {
         bool enabled;
         int turns;
 
+        string[] colorSequence;
+        
+        public Beurt (int turn)
+        {
+            turn = getTurn();
+        }
         public int getTurn() {
             return turns;
+        }
+
+        public void setSequence() {
+            
         }
     }
 }

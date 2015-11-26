@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="beurt.cs" />
+    <Compile Include="Beurt.cs" />
     <Compile Include="CheckDot.cs">
       <SubType>Component</SubType>
     </Compile>

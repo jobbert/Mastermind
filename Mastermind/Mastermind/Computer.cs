@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Mastermind{
     class Computer{
         private Random randomizer = new Random();
-        public string[] colorSequence = new string[6];
+        public string[] colorSequence = new string[4];
         public int number;
         Kleur color;
 

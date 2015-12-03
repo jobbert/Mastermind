@@ -12,7 +12,7 @@ namespace Mastermind
     {
         private int x;
         private int y;
-        private Size DOT_SIZE = new Size(20, 20);
+        private Size DOT_SIZE = new Size(64, 64);
         public Point position;
         Kleur color;
 

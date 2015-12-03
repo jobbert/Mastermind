@@ -34,6 +34,7 @@
             this.highscoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.instructiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showHighscoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,8 @@
             // 
             // highscoreToolStripMenuItem
             // 
+            this.highscoreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showHighscoreToolStripMenuItem});
             this.highscoreToolStripMenuItem.Name = "highscoreToolStripMenuItem";
             this.highscoreToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.highscoreToolStripMenuItem.Text = "Highscore";
@@ -85,6 +88,12 @@
             this.newGameToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.newGameToolStripMenuItem.Text = "New game";
             // 
+            // showHighscoreToolStripMenuItem
+            // 
+            this.showHighscoreToolStripMenuItem.Name = "showHighscoreToolStripMenuItem";
+            this.showHighscoreToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.showHighscoreToolStripMenuItem.Text = "Show highscore";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +105,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -111,6 +121,7 @@
         private System.Windows.Forms.ToolStripMenuItem highscoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem instructiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showHighscoreToolStripMenuItem;
     }
 }
 

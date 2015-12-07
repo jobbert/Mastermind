@@ -21,5 +21,11 @@ namespace Mastermind
         {
 
         }
+
+        private void showHighscoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.Show();
+        }
     }
 }

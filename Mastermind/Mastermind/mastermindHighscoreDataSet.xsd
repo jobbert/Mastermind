@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="mastermindHighscoreDataSet" targetNamespace="http://tempuri.org/mastermindHighscoreDataSet.xsd" xmlns:mstns="http://tempuri.org/mastermindHighscoreDataSet.xsd" xmlns="http://tempuri.org/mastermindHighscoreDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mastermindConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mastermindConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Mastermind.Properties.Settings.GlobalReference.Default.mastermindConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="highscoreTableAdapter" GeneratorDataComponentClassName="highscoreTableAdapter" Name="highscore" UserDataComponentName="highscoreTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mastermindConnectionString (Settings)" DbObjectName="mastermind.highscore" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `naam`, `score`, `tijd` FROM `highscore`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="naam" DataSetColumn="naam" />
+              <Mapping SourceColumn="score" DataSetColumn="score" />
+              <Mapping SourceColumn="tijd" DataSetColumn="tijd" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="mastermindHighscoreDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="mastermindHighscoreDataSet" msprop:Generator_UserDSName="mastermindHighscoreDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="highscore" msprop:Generator_TableClassName="highscoreDataTable" msprop:Generator_TableVarName="tablehighscore" msprop:Generator_TablePropName="highscore" msprop:Generator_RowDeletingName="highscoreRowDeleting" msprop:Generator_RowChangingName="highscoreRowChanging" msprop:Generator_RowEvHandlerName="highscoreRowChangeEventHandler" msprop:Generator_RowDeletedName="highscoreRowDeleted" msprop:Generator_UserTableName="highscore" msprop:Generator_RowChangedName="highscoreRowChanged" msprop:Generator_RowEvArgName="highscoreRowChangeEvent" msprop:Generator_RowClassName="highscoreRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="naam" msprop:Generator_ColumnVarNameInTable="columnnaam" msprop:Generator_ColumnPropNameInRow="naam" msprop:Generator_ColumnPropNameInTable="naamColumn" msprop:Generator_UserColumnName="naam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="score" msprop:Generator_ColumnVarNameInTable="columnscore" msprop:Generator_ColumnPropNameInRow="score" msprop:Generator_ColumnPropNameInTable="scoreColumn" msprop:Generator_UserColumnName="score" type="xs:int" minOccurs="0" />
+              <xs:element name="tijd" msprop:Generator_ColumnVarNameInTable="columntijd" msprop:Generator_ColumnPropNameInRow="tijd" msprop:Generator_ColumnPropNameInTable="tijdColumn" msprop:Generator_UserColumnName="tijd" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -16,5 +16,20 @@ namespace Mastermind
         {
             InitializeComponent();
         }
+        private void Form2_Load(object sender, System.EventArgs e)
+        {
+            
+        }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'mastermindHighscoreDataSet.highscore' table. You can move, or remove it, as needed.
+            this.highscoreTableAdapter.Fill();
+
+            Highscore hs = new Highscore(1, "Sjon");
+
+            hs.get();
+
+        }
     }
 }

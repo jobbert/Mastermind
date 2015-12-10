@@ -8,8 +8,8 @@ namespace Mastermind
 {
     class Kleur
     {
-        string[] colors = new string[6];
-        string[] colors = {"", "", "", "", "", ""};
+        public string[] colors = new string[6];
+        public string[] colors = {"", "", "", "", "", ""};
         public string kleur = "";
 
         public Kleur(int i)

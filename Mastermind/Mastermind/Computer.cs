@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace Mastermind{
     class Computer{
         private Random randomizer = new Random();
@@ -13,18 +12,24 @@ namespace Mastermind{
         Kleur color;
 
         public Computer(){
-            color = new Kleur(number);
+            
         }
 
         public void setSequence() {
             for(int i = 0; i < colorSequence.Length; i++){
+                color = new Kleur(randomKleur());
                 colorSequence[i] = color.getColor();
             }
         }
-        
-        public void randomKleur() {
-            int number = randomizer.Next(colorSequence.Length);
+
+        public string[] getSequence() {
+            return colorSequence;
+        }
+
+        public int randomKleur() {
+            int number = randomizer.Next(5);
             this.number = number;
+            return number;
         }
     }
 }

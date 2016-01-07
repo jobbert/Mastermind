@@ -19,22 +19,7 @@ namespace Mastermind
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void showHighscoreToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 form = new Form2();
-            form.Show();
-        }
-
-        private void button75_Click(object sender, EventArgs e)
-        {
-
-        }
-private void button53_Click(object sender, EventArgs e)
-        {
-
+            private Array[] colorSequence;
         }
     }
 }

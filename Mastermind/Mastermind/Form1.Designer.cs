@@ -152,7 +152,6 @@
             this.showHighscoreToolStripMenuItem.Name = "showHighscoreToolStripMenuItem";
             this.showHighscoreToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.showHighscoreToolStripMenuItem.Text = "Show highscore";
-            this.showHighscoreToolStripMenuItem.Click += new System.EventHandler(this.showHighscoreToolStripMenuItem_Click);
             // 
             // instructiesToolStripMenuItem
             // 
@@ -209,7 +208,6 @@
             this.button6.Size = new System.Drawing.Size(64, 64);
             this.button6.TabIndex = 6;
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button53
             // 
@@ -221,7 +219,6 @@
             this.button53.Size = new System.Drawing.Size(64, 64);
             this.button53.TabIndex = 57;
             this.button53.UseVisualStyleBackColor = true;
-            this.button53.Click += new System.EventHandler(this.button53_Click);
             // 
             // button54
             // 
@@ -293,7 +290,6 @@
             this.button75.Size = new System.Drawing.Size(64, 64);
             this.button75.TabIndex = 86;
             this.button75.UseVisualStyleBackColor = true;
-            this.button75.Click += new System.EventHandler(this.button75_Click);
             // 
             // button37
             // 

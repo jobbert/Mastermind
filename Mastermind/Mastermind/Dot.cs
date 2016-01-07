@@ -31,5 +31,6 @@ namespace Mastermind
         {
             return position;
         }
+
     }
 }

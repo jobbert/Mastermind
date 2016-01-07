@@ -32,5 +32,9 @@ namespace Mastermind
         {
 
         }
+private void button53_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

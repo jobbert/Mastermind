@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beurt.cs" />
+    <Compile Include="check.cs" />
     <Compile Include="CheckDot.cs">
       <SubType>Component</SubType>
     </Compile>

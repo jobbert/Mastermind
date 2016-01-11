@@ -13,8 +13,9 @@ namespace Mastermind
         bool enabled;
         int turns;
 
-        string[] colorSequence;
-        
+        public string[] sequence = new string[4];
+        public string[] guess = new string[4];
+
         public Beurt (int turn, int y)
         {
             Point p1 = new Point(10, y);
@@ -39,8 +40,19 @@ namespace Mastermind
             return turns;
         }
 
-        public void setSequence() {
-            
+        public void setSequence()
+        {
+            guess[0] = "black.png";
+            guess[1] = "blue.png";
+            guess[2] = "green.png";
+            guess[3] = "yellow.png";
+
+            sequence[0] = "black.png";
+            sequence[1] = "blue.png";
+            sequence[2] = "green.png";
+            sequence[3] = "yellow.png";
+
+            Check.Check(guess, sequence);
         }
     }
 }

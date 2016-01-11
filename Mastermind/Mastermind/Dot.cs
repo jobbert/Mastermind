@@ -10,27 +10,15 @@ namespace Mastermind
 {
     class Dot : Label
     {
-        private int x;
-        private int y;
         private Size DOT_SIZE = new Size(64, 64);
-        public Point position;
         Kleur color;
 
         public Dot(int number) {
             Size grootte = DOT_SIZE;
+            color = new Kleur(number);
             color.setColor(number);
         }
 
-        public void setPosition(int x, int y){
-            this.x = x; 
-            this.y = y;
-            position = new Point(x, y);
-        }
-
-        public Point getPosition()
-        {
-            return position;
-        }
 
     }
 }

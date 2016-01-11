@@ -16,11 +16,17 @@ namespace Mastermind
         int count = 0;
         public string[] colorSequence = new string[4];
         public string[] randomSequence = new string[4];
+        Button[] sequence;
+        Bitmap b;
 
         public Form1()
         {
             InitializeComponent();
-
+            sequence = new Button[4];
+            sequence[0] = guesDot1;
+            sequence[1] = guesDot2;
+            sequence[2] = guesDot3;
+            sequence[3] = guesDot4;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,6 +49,9 @@ namespace Mastermind
         {
             color = new Kleur(0);
             colorSequence[count] = color.getColor();
+            b = new Bitmap(@"Mastermind\kleuren\Dots\black.png");
+            sequence[count].BackgroundImage = b;
+            b.Dispose();
             count++;
         }
 
@@ -50,6 +59,9 @@ namespace Mastermind
         {
             color = new Kleur(1);
             colorSequence[count] = color.getColor();
+            b = new Bitmap(@"Mastermind\kleuren\Dots\blue.png");
+            sequence[count].BackgroundImage = b;
+            b.Dispose();
             count++;
         }
 
@@ -57,6 +69,9 @@ namespace Mastermind
         {
             color = new Kleur(2);
             colorSequence[count] = color.getColor();
+            b = new Bitmap(@"Mastermind\kleuren\Dots\green.png");
+            sequence[count].BackgroundImage = b;
+            b.Dispose();
             count++;
         }
 
@@ -64,6 +79,9 @@ namespace Mastermind
         {
             color = new Kleur(3);
             colorSequence[count] = color.getColor();
+            b = new Bitmap(@"Mastermind\kleuren\Dots\red.png");
+            sequence[count].BackgroundImage = b;
+            b.Dispose();
             count++;
         }
 
@@ -71,6 +89,9 @@ namespace Mastermind
         {
             color = new Kleur(4);
             colorSequence[count] = color.getColor();
+            b = new Bitmap(@"Mastermind\kleuren\Dots\white.png");
+            sequence[count].BackgroundImage = b;
+            b.Dispose();
             count++;
         }
 
@@ -78,6 +99,9 @@ namespace Mastermind
         {
             color = new Kleur(5);
             colorSequence[count] = color.getColor();
+            b = new Bitmap(@"Mastermind\kleuren\Dots\yellow.png");
+            sequence[count].BackgroundImage = b;
+            b.Dispose();
             count++;
         }
         //////////////////////////////

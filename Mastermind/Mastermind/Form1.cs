@@ -16,16 +16,15 @@ namespace Mastermind
         int count = 0;
         public string[] colorSequence = new string[4];
         public string[] randomSequence = new string[4];
-        Button[] sequence;
+        public Button[] sequence = new Button[4];
         Bitmap b;
 
         public Form1()
         {
             InitializeComponent();
-            sequence = new Button[4];
-            sequence[0] = guesDot1;
-            sequence[1] = guesDot2;
-            sequence[2] = guesDot3;
+            sequence[0] = guessDot1;
+            sequence[1] = guessDot2;
+            sequence[2] = guessDot3;
             sequence[3] = guesDot4;
         }
 
@@ -49,9 +48,10 @@ namespace Mastermind
         {
             color = new Kleur(0);
             colorSequence[count] = color.getColor();
-            b = new Bitmap(@"Mastermind\kleuren\Dots\black.png");
-            sequence[count].BackgroundImage = b;
-            b.Dispose();
+            //b = new Bitmap(@"..\kleuren\Dots\black.png");
+            //sequence[count].BackgroundImage = b;
+            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.black));
+            //b.Dispose();
             count++;
         }
 
@@ -59,9 +59,10 @@ namespace Mastermind
         {
             color = new Kleur(1);
             colorSequence[count] = color.getColor();
-            b = new Bitmap(@"Mastermind\kleuren\Dots\blue.png");
-            sequence[count].BackgroundImage = b;
-            b.Dispose();
+            //b = new Bitmap(@"..\kleuren\Dots\blue.png");
+            //sequence[count].BackgroundImage = b;
+            //b.Dispose();
+            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.blue));
             count++;
         }
 
@@ -69,9 +70,10 @@ namespace Mastermind
         {
             color = new Kleur(2);
             colorSequence[count] = color.getColor();
-            b = new Bitmap(@"Mastermind\kleuren\Dots\green.png");
-            sequence[count].BackgroundImage = b;
-            b.Dispose();
+            //b = new Bitmap(@"..\kleuren\Dots\green.png");
+            //sequence[count].BackgroundImage = b;
+            //b.Dispose();
+            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.green));
             count++;
         }
 
@@ -79,9 +81,10 @@ namespace Mastermind
         {
             color = new Kleur(3);
             colorSequence[count] = color.getColor();
-            b = new Bitmap(@"Mastermind\kleuren\Dots\red.png");
-            sequence[count].BackgroundImage = b;
-            b.Dispose();
+            //b = new Bitmap(@"..\kleuren\Dots\red.png");
+            //sequence[count].BackgroundImage = b;
+            //b.Dispose();
+            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.red));
             count++;
         }
 
@@ -89,9 +92,10 @@ namespace Mastermind
         {
             color = new Kleur(4);
             colorSequence[count] = color.getColor();
-            b = new Bitmap(@"Mastermind\kleuren\Dots\white.png");
-            sequence[count].BackgroundImage = b;
-            b.Dispose();
+            //b = new Bitmap(@"..\kleuren\Dots\white.png");
+            //sequence[count].BackgroundImage = b;
+            //b.Dispose();
+            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.white));
             count++;
         }
 
@@ -99,9 +103,10 @@ namespace Mastermind
         {
             color = new Kleur(5);
             colorSequence[count] = color.getColor();
-            b = new Bitmap(@"Mastermind\kleuren\Dots\yellow.png");
-            sequence[count].BackgroundImage = b;
-            b.Dispose();
+            //b = new Bitmap(@"..\kleuren\Dots\yellow.png");
+            //sequence[count].BackgroundImage = b;
+            //b.Dispose();
+            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.yellow));
             count++;
         }
         //////////////////////////////

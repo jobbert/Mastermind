@@ -18,4 +18,3 @@ C:\Users\Job\Source\Repos\Mastermind\Mastermind\Mastermind\obj\Debug\Mastermind.
 C:\Users\Job\Source\Repos\Mastermind\Mastermind\Mastermind\obj\Debug\Mastermind.csproj.GenerateResource.Cache
 C:\Users\Job\Source\Repos\Mastermind\Mastermind\Mastermind\obj\Debug\Mastermind.exe
 C:\Users\Job\Source\Repos\Mastermind\Mastermind\Mastermind\obj\Debug\Mastermind.pdb
-C:\Users\Job\Source\Repos\Mastermind\Mastermind\Mastermind\bin\Debug\MySql.Data.dll

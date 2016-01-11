@@ -11,18 +11,18 @@ namespace Mastermind
         public string[] guess = new string[4];
         public string[] sequence = new string[4];
 
-        //public Check(string[] guess, string[] sequence)
-        public Check()
+        public Check(string[] guess, string[] sequence)
+        //public Check()
         {
-            guess[0] = "black.png";
-            guess[1] = "blue.png";
-            guess[2] = "green.png";
-            guess[3] = "yellow.png";
+            //guess[0] = "black.png";
+            //guess[1] = "blue.png";
+            //guess[2] = "green.png";
+            //guess[3] = "yellow.png";
 
-            sequence[0] = "black.png";
-            sequence[1] = "blue.png";
-            sequence[2] = "green.png";
-            sequence[3] = "yellow.png";
+            //sequence[0] = "black.png";
+            //sequence[1] = "blue.png";
+            //sequence[2] = "green.png";
+            //sequence[3] = "yellow.png";
 
             int p = 0;
             int c = 0;

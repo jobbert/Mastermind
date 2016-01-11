@@ -11,6 +11,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// 
+        /*
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -19,6 +21,7 @@
             }
             base.Dispose(disposing);
         }
+        */
 
         #region Windows Form Designer generated code
 
@@ -39,7 +42,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mastermindHighscoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.highscoreBindingSource)).BeginInit();
-            this.SuspendLayout();
+            //this.SuspendLayout();
             // 
             // dataGridView1
             // 
@@ -97,6 +100,7 @@
             // 
             // Form2
             // 
+            /*
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
@@ -109,7 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mastermindHighscoreDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.highscoreBindingSource)).EndInit();
             this.ResumeLayout(false);
-
+            */
         }
 
         #endregion

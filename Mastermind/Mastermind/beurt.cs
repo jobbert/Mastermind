@@ -12,11 +12,15 @@ namespace Mastermind
     {
         bool enabled;
         int turns;
+        Form1 form = new Form1();
         
 
-        string[] colorSequence;
+        public string[] sequence = new string[4];
+        public string[] guess = new string[4];
+
         
-        public Beurt (int turn, int y)
+        
+        public Beurt (int turn)
         {
             Dot dot11 = new Dot(6);
             Dot dot12 = new Dot(6);
@@ -58,45 +62,45 @@ namespace Mastermind
             Dot dot83 = new Dot(6);
             Dot dot84 = new Dot(6);
 
-            Checkdot Checkdot11 = new Checkdot(3);
-            Checkdot Checkdot12 = new Checkdot(3);
-            Checkdot Checkdot13 = new Checkdot(3);
-            Checkdot Checkdot14 = new Checkdot(3);
+            Checkdot Checkdot11 = new Checkdot(6);
+            Checkdot Checkdot12 = new Checkdot(6);
+            Checkdot Checkdot13 = new Checkdot(6);
+            Checkdot Checkdot14 = new Checkdot(6);
 
-            Checkdot Checkdot21 = new Checkdot(3);
-            Checkdot Checkdot22 = new Checkdot(3);
-            Checkdot Checkdot23 = new Checkdot(3);
-            Checkdot Checkdot24 = new Checkdot(3);
+            Checkdot Checkdot21 = new Checkdot(6);
+            Checkdot Checkdot22 = new Checkdot(6);
+            Checkdot Checkdot23 = new Checkdot(6);
+            Checkdot Checkdot24 = new Checkdot(6);
 
-            Checkdot Checkdot31 = new Checkdot(3);
-            Checkdot Checkdot32 = new Checkdot(3);
-            Checkdot Checkdot33 = new Checkdot(3);
-            Checkdot Checkdot34 = new Checkdot(3);
+            Checkdot Checkdot31 = new Checkdot(6);
+            Checkdot Checkdot32 = new Checkdot(6);
+            Checkdot Checkdot33 = new Checkdot(6);
+            Checkdot Checkdot34 = new Checkdot(6);
 
-            Checkdot Checkdot41 = new Checkdot(3);
-            Checkdot Checkdot42 = new Checkdot(3);
-            Checkdot Checkdot43 = new Checkdot(3);
-            Checkdot Checkdot44 = new Checkdot(3);
+            Checkdot Checkdot41 = new Checkdot(6);
+            Checkdot Checkdot42 = new Checkdot(6);
+            Checkdot Checkdot43 = new Checkdot(6);
+            Checkdot Checkdot44 = new Checkdot(6);
 
-            Checkdot Checkdot51 = new Checkdot(3);
-            Checkdot Checkdot52 = new Checkdot(3);
-            Checkdot Checkdot53 = new Checkdot(3);
-            Checkdot Checkdot54 = new Checkdot(3);
+            Checkdot Checkdot51 = new Checkdot(6);
+            Checkdot Checkdot52 = new Checkdot(6);
+            Checkdot Checkdot53 = new Checkdot(6);
+            Checkdot Checkdot54 = new Checkdot(6);
 
-            Checkdot Checkdot61 = new Checkdot(3);
-            Checkdot Checkdot62 = new Checkdot(3);
-            Checkdot Checkdot63 = new Checkdot(3);
-            Checkdot Checkdot64 = new Checkdot(3);
+            Checkdot Checkdot61 = new Checkdot(6);
+            Checkdot Checkdot62 = new Checkdot(6);
+            Checkdot Checkdot63 = new Checkdot(6);
+            Checkdot Checkdot64 = new Checkdot(6);
 
-            Checkdot Checkdot71 = new Checkdot(3);
-            Checkdot Checkdot72 = new Checkdot(3);
-            Checkdot Checkdot73 = new Checkdot(3);
-            Checkdot Checkdot74 = new Checkdot(3);
-
-            Checkdot Checkdot81 = new Checkdot(3);
-            Checkdot Checkdot82 = new Checkdot(3);
-            Checkdot Checkdot83 = new Checkdot(3);
-            Checkdot Checkdot84 = new Checkdot(3);
+            Checkdot Checkdot71 = new Checkdot(6);
+            Checkdot Checkdot72 = new Checkdot(6);
+            Checkdot Checkdot73 = new Checkdot(6);
+            Checkdot Checkdot74 = new Checkdot(6);
+       
+            Checkdot Checkdot81 = new Checkdot(6);
+            Checkdot Checkdot82 = new Checkdot(6);
+            Checkdot Checkdot83 = new Checkdot(6);
+            Checkdot Checkdot84 = new Checkdot(6);
 
             Object[,,] buttonrows = new Object[8, 2, 4]
             {
@@ -126,7 +130,18 @@ namespace Mastermind
         }
 
         public void setSequence() {
+            guess[0] = "black.png";
+            guess[1] = "blue.png";
+            guess[2] = "green.png";
+            guess[3] = "yellow.png";
+
+            sequence[0] = "black.png";
+            sequence[1] = "blue.png";
+            sequence[2] = "green.png";
+            sequence[3] = "yellow.png";
+
             
+
         }
     }
 }

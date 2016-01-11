@@ -126,6 +126,7 @@
             this.bluebtn.Size = new System.Drawing.Size(64, 64);
             this.bluebtn.TabIndex = 0;
             this.bluebtn.UseVisualStyleBackColor = true;
+            this.bluebtn.Click += new System.EventHandler(this.bluebtn_Click);
             // 
             // menuStrip1
             // 
@@ -175,6 +176,7 @@
             this.greenbtn.Size = new System.Drawing.Size(64, 64);
             this.greenbtn.TabIndex = 3;
             this.greenbtn.UseVisualStyleBackColor = true;
+            this.greenbtn.Click += new System.EventHandler(this.greenbtn_Click);
             // 
             // redbtn
             // 
@@ -186,6 +188,7 @@
             this.redbtn.Size = new System.Drawing.Size(64, 64);
             this.redbtn.TabIndex = 4;
             this.redbtn.UseVisualStyleBackColor = true;
+            this.redbtn.Click += new System.EventHandler(this.redbtn_Click);
             // 
             // whitebtn
             // 
@@ -197,6 +200,7 @@
             this.whitebtn.Size = new System.Drawing.Size(64, 64);
             this.whitebtn.TabIndex = 5;
             this.whitebtn.UseVisualStyleBackColor = true;
+            this.whitebtn.Click += new System.EventHandler(this.whitebtn_Click);
             // 
             // yellowbtn
             // 
@@ -208,6 +212,7 @@
             this.yellowbtn.Size = new System.Drawing.Size(64, 64);
             this.yellowbtn.TabIndex = 6;
             this.yellowbtn.UseVisualStyleBackColor = true;
+            this.yellowbtn.Click += new System.EventHandler(this.yellowbtn_Click);
             // 
             // sequenceDot4
             // 
@@ -267,6 +272,7 @@
             this.blackbtn.Size = new System.Drawing.Size(64, 64);
             this.blackbtn.TabIndex = 1;
             this.blackbtn.UseVisualStyleBackColor = false;
+            this.blackbtn.Click += new System.EventHandler(this.blackbtn_Click);
             // 
             // checkdot84
             // 

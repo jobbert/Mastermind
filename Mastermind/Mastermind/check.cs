@@ -32,9 +32,9 @@ namespace Mastermind
             {
                 if (guess[i] == sequence[i] && sequence[i] != null)
                 {
-                    p++;
                     guess[i] = null;
                     sequence[i] = null;
+                    p++;
                 }
                 MessageBox.Show("p = " + p);
             }
@@ -45,9 +45,9 @@ namespace Mastermind
                 //if (guess[y] == sequence[z])
                 if (Array.IndexOf(sequence, guess[i]) != -1 && guess[i] != null)
                 {
-                    c++;
                     sequence[z] = null;
                     guess[i] = null;
+                    c++;
                 }
                 MessageBox.Show("c = " + c);
             }

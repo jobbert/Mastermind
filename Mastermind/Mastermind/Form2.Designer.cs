@@ -33,14 +33,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mastermindHighscoreDataSet = new Mastermind.mastermindHighscoreDataSet();
+            //this.mastermindHighscoreDataSet = new Mastermind.mastermindHighscoreDataSet();
             this.highscoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.highscoreTableAdapter = new Mastermind.mastermindHighscoreDataSetTableAdapters.highscoreTableAdapter();
+            //this.highscoreTableAdapter = new Mastermind.mastermindHighscoreDataSetTableAdapters.highscoreTableAdapter();
             this.naamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tijdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mastermindHighscoreDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.mastermindHighscoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.highscoreBindingSource)).BeginInit();
             //this.SuspendLayout();
             // 
@@ -65,17 +65,17 @@
             // 
             // mastermindHighscoreDataSet
             // 
-            this.mastermindHighscoreDataSet.DataSetName = "mastermindHighscoreDataSet";
-            this.mastermindHighscoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.mastermindHighscoreDataSet.DataSetName = "mastermindHighscoreDataSet";
+            //this.mastermindHighscoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // highscoreBindingSource
             // 
             this.highscoreBindingSource.DataMember = "highscore";
-            this.highscoreBindingSource.DataSource = this.mastermindHighscoreDataSet;
+            //this.highscoreBindingSource.DataSource = this.mastermindHighscoreDataSet;
             // 
             // highscoreTableAdapter
             // 
-            this.highscoreTableAdapter.ClearBeforeFill = true;
+            //this.highscoreTableAdapter.ClearBeforeFill = true;
             // 
             // naamDataGridViewTextBoxColumn
             // 
@@ -117,9 +117,9 @@
         }
 
         #endregion
-        private mastermindHighscoreDataSet mastermindHighscoreDataSet;
+        // private mastermindHighscoreDataSet mastermindHighscoreDataSet;
         private System.Windows.Forms.BindingSource highscoreBindingSource;
-        private mastermindHighscoreDataSetTableAdapters.highscoreTableAdapter highscoreTableAdapter;
+        // private mastermindHighscoreDataSetTableAdapters.highscoreTableAdapter highscoreTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn naamDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tijdDataGridViewTextBoxColumn;

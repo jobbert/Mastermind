@@ -12,27 +12,112 @@ namespace Mastermind
     {
         bool enabled;
         int turns;
+        
 
-        public string[] sequence = new string[4];
-        public string[] guess = new string[4];
-
+        string[] colorSequence;
+        
         public Beurt (int turn, int y)
         {
-            Point p1 = new Point(10, y);
-            Panel dot1 = new Panel();
-            dot1.PointToClient(p1);
+            Dot dot11 = new Dot(6);
+            Dot dot12 = new Dot(6);
+            Dot dot13 = new Dot(6);
+            Dot dot14 = new Dot(6);
 
-            Point p2 = new Point(82, y);
-            Panel dot2 = new Panel();
-            dot2.PointToClient(p2);
+            Dot dot21 = new Dot(6);
+            Dot dot22 = new Dot(6);
+            Dot dot23 = new Dot(6);
+            Dot dot24 = new Dot(6);
 
-            Point p3 = new Point(154, y);
-            Panel dot3 = new Panel();
-            dot3.PointToClient(p3);
+            Dot dot31 = new Dot(6);
+            Dot dot32 = new Dot(6);
+            Dot dot33 = new Dot(6);
+            Dot dot34 = new Dot(6);
 
-            Point p4 = new Point(226, y);
-            Panel dot4 = new Panel();
-            dot4.PointToClient(p4);
+            Dot dot41 = new Dot(6);
+            Dot dot42 = new Dot(6);
+            Dot dot43 = new Dot(6);
+            Dot dot44 = new Dot(6);
+
+            Dot dot51 = new Dot(6);
+            Dot dot52 = new Dot(6);
+            Dot dot53 = new Dot(6);
+            Dot dot54 = new Dot(6);
+
+            Dot dot61 = new Dot(6);
+            Dot dot62 = new Dot(6);
+            Dot dot63 = new Dot(6);
+            Dot dot64 = new Dot(6);
+
+            Dot dot71 = new Dot(6);
+            Dot dot72 = new Dot(6);
+            Dot dot73 = new Dot(6);
+            Dot dot74 = new Dot(6);
+
+            Dot dot81 = new Dot(6);
+            Dot dot82 = new Dot(6);
+            Dot dot83 = new Dot(6);
+            Dot dot84 = new Dot(6);
+
+            Checkdot Checkdot11 = new Checkdot(3);
+            Checkdot Checkdot12 = new Checkdot(3);
+            Checkdot Checkdot13 = new Checkdot(3);
+            Checkdot Checkdot14 = new Checkdot(3);
+
+            Checkdot Checkdot21 = new Checkdot(3);
+            Checkdot Checkdot22 = new Checkdot(3);
+            Checkdot Checkdot23 = new Checkdot(3);
+            Checkdot Checkdot24 = new Checkdot(3);
+
+            Checkdot Checkdot31 = new Checkdot(3);
+            Checkdot Checkdot32 = new Checkdot(3);
+            Checkdot Checkdot33 = new Checkdot(3);
+            Checkdot Checkdot34 = new Checkdot(3);
+
+            Checkdot Checkdot41 = new Checkdot(3);
+            Checkdot Checkdot42 = new Checkdot(3);
+            Checkdot Checkdot43 = new Checkdot(3);
+            Checkdot Checkdot44 = new Checkdot(3);
+
+            Checkdot Checkdot51 = new Checkdot(3);
+            Checkdot Checkdot52 = new Checkdot(3);
+            Checkdot Checkdot53 = new Checkdot(3);
+            Checkdot Checkdot54 = new Checkdot(3);
+
+            Checkdot Checkdot61 = new Checkdot(3);
+            Checkdot Checkdot62 = new Checkdot(3);
+            Checkdot Checkdot63 = new Checkdot(3);
+            Checkdot Checkdot64 = new Checkdot(3);
+
+            Checkdot Checkdot71 = new Checkdot(3);
+            Checkdot Checkdot72 = new Checkdot(3);
+            Checkdot Checkdot73 = new Checkdot(3);
+            Checkdot Checkdot74 = new Checkdot(3);
+
+            Checkdot Checkdot81 = new Checkdot(3);
+            Checkdot Checkdot82 = new Checkdot(3);
+            Checkdot Checkdot83 = new Checkdot(3);
+            Checkdot Checkdot84 = new Checkdot(3);
+
+            Object[,,] buttonrows = new Object[8, 2, 4]
+            {
+                {
+                    {dot11, dot12, dot13, dot14 }, {Checkdot11, Checkdot12, Checkdot13, Checkdot14 }
+                }, {
+                    {dot21, dot22, dot23, dot24 }, {Checkdot21, Checkdot22, Checkdot23, Checkdot24 }
+                }, {
+                    {dot31, dot32, dot33, dot34 }, {Checkdot31, Checkdot32, Checkdot33, Checkdot34 }
+                }, {
+                    {dot41, dot42, dot43, dot44 }, {Checkdot41, Checkdot42, Checkdot43, Checkdot44 }
+                }, {
+                    {dot51, dot52, dot53, dot54 }, {Checkdot51, Checkdot52, Checkdot53, Checkdot54 }
+                }, {
+                    {dot61, dot62, dot63, dot64 }, {Checkdot61, Checkdot62, Checkdot63, Checkdot64 }
+                }, {
+                    {dot71, dot72, dot73, dot74 }, {Checkdot71, Checkdot72, Checkdot73, Checkdot74 }
+                }, {
+                    {dot81, dot82, dot83, dot84 }, {Checkdot81, Checkdot82, Checkdot83, Checkdot84 }
+                }
+            };
 
             turn = getTurn();
         }
@@ -40,19 +125,8 @@ namespace Mastermind
             return turns;
         }
 
-        public void setSequence()
-        {
-            guess[0] = "black.png";
-            guess[1] = "blue.png";
-            guess[2] = "green.png";
-            guess[3] = "yellow.png";
-
-            sequence[0] = "black.png";
-            sequence[1] = "blue.png";
-            sequence[2] = "green.png";
-            sequence[3] = "yellow.png";
-
-            Check.Check(guess, sequence);
+        public void setSequence() {
+            
         }
     }
 }

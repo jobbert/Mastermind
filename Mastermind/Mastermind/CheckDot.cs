@@ -10,31 +10,15 @@ namespace Mastermind
 {
     class Checkdot : Label
     {
+        Kleur color;
         private int x;
         private int y;
-        Point position;
-        
-        int number;
-        
-        public Checkdot(Kleur color, Point positie) {
+        private Size DOT_SIZE = new Size(32, 32);
+        public Point position;
+
+        public Checkdot(int number) {
             color = new Kleur(number);
-            positie = position;
-        }
-
-        public void setPosition(int x, int y)
-        {
-            this.x = x;
-            this.y = y;
-            position = new Point(x, y);
-        }
-
-        public Point getPosition()
-        {
-            return position;
-        }
-        
-        public bool ckeckPosition(Dot punt) {
-            return true;
+            
         }
         
     }

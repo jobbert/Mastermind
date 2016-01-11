@@ -9,21 +9,20 @@ namespace Mastermind
 {
     class Check
     {
-        public string[] guess = new string[4];
-        public string[] sequence = new string[4];
+        //public string[] guess = new string[4];
+        //public string[] sequence = new string[4];
 
         public Check(string[] guess, string[] sequence)
-        //public Check()
         {
-            //guess[0] = "black.png";
-            //guess[1] = "blue.png";
-            //guess[2] = "green.png";
-            //guess[3] = "yellow.png";
+            guess[0] = "black.png";
+            guess[1] = "blue.png";
+            guess[2] = "green.png";
+            guess[3] = "yellow.png";
 
-            //sequence[0] = "black.png";
-            //sequence[1] = "blue.png";
-            //sequence[2] = "green.png";
-            //sequence[3] = "yellow.png";
+            sequence[0] = "black.png";
+            sequence[1] = "yellow.png"; 
+            sequence[2] = "green.png";
+            sequence[3] = "blue.png"; 
 
             int p = 0;
             int c = 0;
@@ -32,6 +31,8 @@ namespace Mastermind
             {
                 if (guess[i] == sequence[i] && sequence[i] != null)
                 {
+                    MessageBox.Show(guess[i].ToString());
+                    MessageBox.Show(sequence[i].ToString());
                     guess[i] = null;
                     sequence[i] = null;
                     p++;
@@ -41,17 +42,18 @@ namespace Mastermind
             for (int i = 0; i < guess.Length; i++)
             {
                 int z = Array.IndexOf(sequence, guess[i]);
-                MessageBox.Show("z : " + z);
-                //if (guess[y] == sequence[z])
-                if (Array.IndexOf(sequence, guess[i]) != -1 && guess[i] != null)
+                MessageBox.Show("z : " + z.ToString());
+                if (guess[i] == sequence[Array.IndexOf(sequence, guess[i])] && guess[i] != null)
+                //if (Array.IndexOf(sequence, guess[i]) != -1 && guess[i] != null)
                 {
-                    sequence[z] = null;
+                    sequence[Array.IndexOf(sequence, guess[i])] = null;
                     guess[i] = null;
                     c++;
                 }
-                MessageBox.Show("c = " + c);
+                MessageBox.Show("c = " + c.ToString());
             }
-
+            MessageBox.Show("c = " + c.ToString());
+            MessageBox.Show("p = " + c.ToString());
         }
     }
 }

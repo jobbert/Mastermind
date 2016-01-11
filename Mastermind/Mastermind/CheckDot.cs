@@ -11,10 +11,7 @@ namespace Mastermind
     class Checkdot : Label
     {
         Kleur color;
-        private int x;
-        private int y;
         private Size DOT_SIZE = new Size(32, 32);
-        public Point position;
 
         public Checkdot(int number) {
             color = new Kleur(number);

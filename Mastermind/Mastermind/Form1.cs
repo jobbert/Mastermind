@@ -15,16 +15,17 @@ namespace Mastermind
         Kleur color;
         int count = 0;
         public string[] colorSequence = new string[4];
+        public string[] randomSequence = new string[4];
 
         public Form1()
         {
             InitializeComponent();
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-             
+
         }
         /*
         private void alert(int count, string colorSequence)
@@ -82,21 +83,34 @@ namespace Mastermind
         //////////////////////////////
         ///* for testing purposes *///
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   
             MessageBox.Show(colorSequence[0] + '|' + colorSequence[1] + '|' + colorSequence[2] + '|' + colorSequence[3]);
             if (count == 4)
             {
-                foreach (string item in colorSequence)
-                {
-                    MessageBox.Show(item);
-                }
                 for (int i = 0; i < 4; i++)
                 {
                     colorSequence[i] = null;//reset the colorSequence array
                 }
                 count = 0;//reset the count
-                MessageBox.Show(colorSequence[0] + '|' + colorSequence[1] + '|' + colorSequence[2] + '|' + colorSequence[3]);
+                MessageBox.Show("colorSequence : \n" + colorSequence[0] + '\n' + colorSequence[1] + '\n' + colorSequence[2] + '\n' + colorSequence[3]);
             }
+            var random = new Random();
+            for (int i = 0; i < 4; i++)
+            {
+                int randomInt = random.Next(6);
+                color = new Kleur(randomInt);
+                randomSequence[i] = color.getColor();
+                MessageBox.Show("randomSequence : \n" + randomSequence[0] + '\n' + randomSequence[1] + '\n' + randomSequence[2] + '\n' + randomSequence[3]);
+                if (i == 3)
+                {
+                    for (int x = 0; x < 4; x++)
+                    {
+                        randomSequence[x] = null;//reset the colorSequence array
+                    }
+                }
+            }
+            //string[] randomSequence = { "black.png", "black.png", "black.png", "black.png" };
+            Check check = new Check(colorSequence, randomSequence);
         }
         //////////////////////////////
         //////////////////////////////

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Mastermind
 {
@@ -31,24 +32,25 @@ namespace Mastermind
             {
                 if (guess[i] == sequence[i] && sequence[i] != null)
                 {
+                    p++;
                     guess[i] = null;
                     sequence[i] = null;
-                    p++;
                 }
+                MessageBox.Show("p = " + p);
             }
             for (int i = 0; i < guess.Length; i++)
             {
                 int z = Array.IndexOf(sequence, guess[i]);
-                if (guess[i] == sequence[z])
+                MessageBox.Show("z : " + z);
+                //if (guess[y] == sequence[z])
+                if (Array.IndexOf(sequence, guess[i]) != -1 && guess[i] != null)
                 {
-                    guess[i] = null;
-                    sequence[z] = null;
                     c++;
+                    sequence[z] = null;
+                    guess[i] = null;
                 }
+                MessageBox.Show("c = " + c);
             }
-            Console.WriteLine("p = " + p);
-            Console.WriteLine("c = " + c);
-
 
         }
     }

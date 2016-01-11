@@ -26,7 +26,18 @@ namespace Mastermind
         {
              
         }
-
+        /*
+        private void alert(int count, string colorSequence)
+        {
+            if(count == 4)
+            {
+                foreach (string item in colorSequence)
+                {
+                    MessageBox.Show(item);
+                }
+            }
+        }
+        */
         public void blackbtn_Click(object sender, EventArgs e)
         {
             color = new Kleur(0);
@@ -68,7 +79,26 @@ namespace Mastermind
             colorSequence[count] = color.getColor();
             count++;
         }
-
+        //////////////////////////////
+        ///* for testing purposes *///
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(colorSequence[0] + '|' + colorSequence[1] + '|' + colorSequence[2] + '|' + colorSequence[3]);
+            if (count == 4)
+            {
+                foreach (string item in colorSequence)
+                {
+                    MessageBox.Show(item);
+                }
+                for (int i = 0; i < 4; i++)
+                {
+                    colorSequence[i] = null;//reset the colorSequence array
+                }
+                count = 0;//reset the count
+                MessageBox.Show(colorSequence[0] + '|' + colorSequence[1] + '|' + colorSequence[2] + '|' + colorSequence[3]);
+            }
+        }
+        //////////////////////////////
+        //////////////////////////////
     }
-    
 }

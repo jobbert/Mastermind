@@ -12,6 +12,7 @@ namespace Mastermind
 {
     public partial class Form1 : Form
     {
+        Button[] buttonrow = new Button[7];
         public Form1()
         {
             InitializeComponent();

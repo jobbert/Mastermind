@@ -126,13 +126,13 @@ namespace Mastermind
             turn = getTurn();
         }
         public int getTurn() {
+            setTurn(turns);
             return turns;
         }
 
         public void setTurn(int turn) {
             this.turns = turn;
             turns++;
-            getTurn();
         }
 
         public void setSequence() {

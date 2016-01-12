@@ -14,7 +14,7 @@ namespace Mastermind
     public partial class Form1 : Form
     {
         Kleur color;
-        int count = 0;
+        int count = 1;
         int turn;
         public string[] colorSequence = new string[4];
         public string[] randomSequence = new string[4];
@@ -150,7 +150,7 @@ namespace Mastermind
             }
 
             Beurt beurt = new Beurt(turn);
-            beurt.setTurn(turn);
+
             turn = beurt.getTurn();
             MessageBox.Show(turn.ToString());
 

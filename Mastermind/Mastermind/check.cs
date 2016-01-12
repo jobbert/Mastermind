@@ -20,9 +20,9 @@ namespace Mastermind
             //guess[3] = "yellow.png";
 
             //sequence[0] = "black.png";
-            //sequence[1] = "yellow.png"; 
+            //sequence[1] = "yellow.png";
             //sequence[2] = "green.png";
-            //sequence[3] = "blue.png"; 
+            //sequence[3] = "blue.png";
 
             int p = 0;
             int c = 0;

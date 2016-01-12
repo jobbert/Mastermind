@@ -34,7 +34,7 @@
             this.showHighscoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.instructiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.go = new System.Windows.Forms.Button();
             this.guessDot3 = new System.Windows.Forms.Button();
             this.guessDot2 = new System.Windows.Forms.Button();
             this.guessDot1 = new System.Windows.Forms.Button();
@@ -154,15 +154,15 @@
             this.newGameToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.newGameToolStripMenuItem.Text = "New game";
             // 
-            // button1
+            // go
             // 
-            this.button1.Location = new System.Drawing.Point(491, 678);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 153;
-            this.button1.Text = "Go";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.go.Location = new System.Drawing.Point(491, 678);
+            this.go.Name = "go";
+            this.go.Size = new System.Drawing.Size(75, 23);
+            this.go.TabIndex = 153;
+            this.go.Text = "Go";
+            this.go.UseVisualStyleBackColor = true;
+            this.go.Click += new System.EventHandler(this.go_Click);
             // 
             // guessDot3
             // 
@@ -1070,7 +1070,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 726);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.go);
             this.Controls.Add(this.guessDot3);
             this.Controls.Add(this.guessDot2);
             this.Controls.Add(this.guessDot1);
@@ -1246,7 +1246,7 @@
         private System.Windows.Forms.Button guessDot2;
         private System.Windows.Forms.Button guessDot1;
         private System.Windows.Forms.Button guessDot4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button go;
     }
 }
 

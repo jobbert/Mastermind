@@ -126,7 +126,8 @@ namespace Mastermind
                 int randomInt = random.Next(6);
                 color = new Kleur(randomInt);
                 randomSequence[i] = color.getColor();
-                sequence[i].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.yellow));
+                string val = randomSequence[i];
+                sequence[i].BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(val);
                 MessageBox.Show("randomSequence : \n" + randomSequence[0] + '\n' + randomSequence[1] + '\n' + randomSequence[2] + '\n' + randomSequence[3]);
                 //if (i == 3)
                 //{
@@ -138,15 +139,14 @@ namespace Mastermind
             }
             if (count == 4)
             {
-                //for (int i = 0; i < 4; i++)
-                //{
-                //    colorSequence[i] = null;//reset the colorSequence array
-                //}
+                for (int i = 0; i < 4; i++)
+                {
+                    //before the next line runs the sequence needs to be transfered to its fixed turn position and its checkDots need to be filled
+                    colorSequence[i] = null;//reset the colorSequence array
+                    guess[i].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.hole));//reset the guess array
+                }
                 count = 0;//reset the count
             }
-            //string[] randomSequence = { "black.png", "black.png", "black.png", "black.png" };
-            //MessageBox.Show("colorSequence = " + colorSequence.ToString());
-            //MessageBox.Show("randomSequence = " + randomSequence.ToString());
 
             Check check = new Check(colorSequence, randomSequence);
         }

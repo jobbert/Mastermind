@@ -117,7 +117,7 @@ namespace Mastermind
         }
         //////////////////////////////
         ///* for testing purposes *///
-        private void button1_Click(object sender, EventArgs e)
+        private void go_Click(object sender, EventArgs e)
         {
             MessageBox.Show("colorSequence : \n" + colorSequence[0] + '\n' + colorSequence[1] + '\n' + colorSequence[2] + '\n' + colorSequence[3]);
             var random = new Random();
@@ -126,7 +126,7 @@ namespace Mastermind
                 int randomInt = random.Next(6);
                 color = new Kleur(randomInt);
                 randomSequence[i] = color.getColor();
-                //sequence[i].BackgroundImage = System.Drawing.Image.FromFile(filename);
+                sequence[i].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.yellow));
                 MessageBox.Show("randomSequence : \n" + randomSequence[0] + '\n' + randomSequence[1] + '\n' + randomSequence[2] + '\n' + randomSequence[3]);
                 //if (i == 3)
                 //{

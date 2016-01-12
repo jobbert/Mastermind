@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,16 +17,21 @@ namespace Mastermind
         int count = 0;
         public string[] colorSequence = new string[4];
         public string[] randomSequence = new string[4];
+        public Button[] guess = new Button[4];
         public Button[] sequence = new Button[4];
-        Bitmap b;
+        //string dir = Path.GetDirectoryName(Application.ExecutablePath);
 
         public Form1()
         {
             InitializeComponent();
-            sequence[0] = guessDot1;
-            sequence[1] = guessDot2;
-            sequence[2] = guessDot3;
-            sequence[3] = guesDot4;
+            guess[0] = guessDot1;
+            guess[1] = guessDot2; 
+            guess[2] = guessDot3; 
+            guess[3] = guessDot4; 
+            sequence[0] = sequenceDot1;
+            sequence[1] = sequenceDot2;
+            sequence[2] = sequenceDot3;
+            sequence[3] = sequenceDot4;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -50,7 +56,7 @@ namespace Mastermind
             colorSequence[count] = color.getColor();
             //b = new Bitmap(@"..\kleuren\Dots\black.png");
             //sequence[count].BackgroundImage = b;
-            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.black));
+            guess[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.black));
             //b.Dispose();
             count++;
         }
@@ -62,7 +68,7 @@ namespace Mastermind
             //b = new Bitmap(@"..\kleuren\Dots\blue.png");
             //sequence[count].BackgroundImage = b;
             //b.Dispose();
-            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.blue));
+            guess[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.blue));
             count++;
         }
 
@@ -73,7 +79,7 @@ namespace Mastermind
             //b = new Bitmap(@"..\kleuren\Dots\green.png");
             //sequence[count].BackgroundImage = b;
             //b.Dispose();
-            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.green));
+            guess[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.green));
             count++;
         }
 
@@ -84,7 +90,7 @@ namespace Mastermind
             //b = new Bitmap(@"..\kleuren\Dots\red.png");
             //sequence[count].BackgroundImage = b;
             //b.Dispose();
-            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.red));
+            guess[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.red));
             count++;
         }
 
@@ -95,7 +101,7 @@ namespace Mastermind
             //b = new Bitmap(@"..\kleuren\Dots\white.png");
             //sequence[count].BackgroundImage = b;
             //b.Dispose();
-            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.white));
+            guess[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.white));
             count++;
         }
 
@@ -106,39 +112,42 @@ namespace Mastermind
             //b = new Bitmap(@"..\kleuren\Dots\yellow.png");
             //sequence[count].BackgroundImage = b;
             //b.Dispose();
-            sequence[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.yellow));
+            guess[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.yellow));
             count++;
         }
         //////////////////////////////
         ///* for testing purposes *///
         private void button1_Click(object sender, EventArgs e)
-        {   
-            MessageBox.Show(colorSequence[0] + '|' + colorSequence[1] + '|' + colorSequence[2] + '|' + colorSequence[3]);
-            if (count == 4)
-            {
-                for (int i = 0; i < 4; i++)
-                {
-                    colorSequence[i] = null;//reset the colorSequence array
-                }
-                count = 0;//reset the count
-                MessageBox.Show("colorSequence : \n" + colorSequence[0] + '\n' + colorSequence[1] + '\n' + colorSequence[2] + '\n' + colorSequence[3]);
-            }
+        {
+            MessageBox.Show("colorSequence : \n" + colorSequence[0] + '\n' + colorSequence[1] + '\n' + colorSequence[2] + '\n' + colorSequence[3]);
             var random = new Random();
             for (int i = 0; i < 4; i++)
             {
                 int randomInt = random.Next(6);
                 color = new Kleur(randomInt);
                 randomSequence[i] = color.getColor();
+                //sequence[i].BackgroundImage = System.Drawing.Image.FromFile(filename);
                 MessageBox.Show("randomSequence : \n" + randomSequence[0] + '\n' + randomSequence[1] + '\n' + randomSequence[2] + '\n' + randomSequence[3]);
-                if (i == 3)
-                {
-                    for (int x = 0; x < 4; x++)
-                    {
-                        randomSequence[x] = null;//reset the colorSequence array
-                    }
-                }
+                //if (i == 3)
+                //{
+                //    for (int x = 0; x < 4; x++)
+                //    {
+                //        randomSequence[x] = null;//reset the colorSequence array
+                //    }
+                //}
+            }
+            if (count == 4)
+            {
+                //for (int i = 0; i < 4; i++)
+                //{
+                //    colorSequence[i] = null;//reset the colorSequence array
+                //}
+                count = 0;//reset the count
             }
             //string[] randomSequence = { "black.png", "black.png", "black.png", "black.png" };
+            //MessageBox.Show("colorSequence = " + colorSequence.ToString());
+            //MessageBox.Show("randomSequence = " + randomSequence.ToString());
+
             Check check = new Check(colorSequence, randomSequence);
         }
         //////////////////////////////

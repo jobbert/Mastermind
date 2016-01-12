@@ -38,7 +38,7 @@
             this.guessDot3 = new System.Windows.Forms.Button();
             this.guessDot2 = new System.Windows.Forms.Button();
             this.guessDot1 = new System.Windows.Forms.Button();
-            this.guesDot4 = new System.Windows.Forms.Button();
+            this.guessDot4 = new System.Windows.Forms.Button();
             this.checkdot173 = new System.Windows.Forms.Button();
             this.checkdot11 = new System.Windows.Forms.Button();
             this.checkdot12 = new System.Windows.Forms.Button();
@@ -197,16 +197,16 @@
             this.guessDot1.TabIndex = 150;
             this.guessDot1.UseVisualStyleBackColor = true;
             // 
-            // guesDot4
+            // guessDot4
             // 
-            this.guesDot4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guesDot4.BackgroundImage")));
-            this.guesDot4.FlatAppearance.BorderSize = 0;
-            this.guesDot4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.guesDot4.Location = new System.Drawing.Point(292, 657);
-            this.guesDot4.Name = "guesDot4";
-            this.guesDot4.Size = new System.Drawing.Size(64, 64);
-            this.guesDot4.TabIndex = 149;
-            this.guesDot4.UseVisualStyleBackColor = true;
+            this.guessDot4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guessDot4.BackgroundImage")));
+            this.guessDot4.FlatAppearance.BorderSize = 0;
+            this.guessDot4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guessDot4.Location = new System.Drawing.Point(292, 657);
+            this.guessDot4.Name = "guessDot4";
+            this.guessDot4.Size = new System.Drawing.Size(64, 64);
+            this.guessDot4.TabIndex = 149;
+            this.guessDot4.UseVisualStyleBackColor = true;
             // 
             // checkdot173
             // 
@@ -1074,7 +1074,7 @@
             this.Controls.Add(this.guessDot3);
             this.Controls.Add(this.guessDot2);
             this.Controls.Add(this.guessDot1);
-            this.Controls.Add(this.guesDot4);
+            this.Controls.Add(this.guessDot4);
             this.Controls.Add(this.checkdot173);
             this.Controls.Add(this.checkdot11);
             this.Controls.Add(this.checkdot12);
@@ -1245,7 +1245,7 @@
         private System.Windows.Forms.Button guessDot3;
         private System.Windows.Forms.Button guessDot2;
         private System.Windows.Forms.Button guessDot1;
-        private System.Windows.Forms.Button guesDot4;
+        private System.Windows.Forms.Button guessDot4;
         private System.Windows.Forms.Button button1;
     }
 }

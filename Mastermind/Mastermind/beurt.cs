@@ -129,6 +129,12 @@ namespace Mastermind
             return turns;
         }
 
+        public void setTurn(int turn) {
+            this.turns = turn;
+            turns++;
+            getTurn();
+        }
+
         public void setSequence() {
             guess[0] = "black.png";
             guess[1] = "blue.png";

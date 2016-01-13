@@ -16,92 +16,93 @@ namespace Mastermind
         
         public string[] sequence = new string[4];
         public string[] guess = new string[4];
-        Object[,,] buttonrows;
+        Button[,,] buttonrows;
 
+        
 
+        public Beurt (int turn, bool enabled, Form1 form) {
+            Button dot11 = new Button();
+            Button dot12 = new Button();
+            Button dot13 = new Button();
+            Button dot14 = new Button();
 
-        public Beurt (int turn, bool enabled) {
-            Dot dot11 = new Dot(6);
-            Dot dot12 = new Dot(6);
-            Dot dot13 = new Dot(6);
-            Dot dot14 = new Dot(6);
+            Button Checkdot11 = new Button();
+            Button Checkdot12 = new Button();
+            Button Checkdot13 = new Button();
+            Button Checkdot14 = new Button();
 
-            Dot dot21 = new Dot(6);
-            Dot dot22 = new Dot(6);
-            Dot dot23 = new Dot(6);
-            Dot dot24 = new Dot(6);
+            Button dot21 = new Button();
+            Button dot22 = new Button();
+            Button dot23 = new Button();
+            Button dot24 = new Button();
 
-            Dot dot31 = new Dot(6);
-            Dot dot32 = new Dot(6);
-            Dot dot33 = new Dot(6);
-            Dot dot34 = new Dot(6);
+            Button Checkdot21 = new Button();
+            Button Checkdot22 = new Button();
+            Button Checkdot23 = new Button();
+            Button Checkdot24 = new Button();
 
-            Dot dot41 = new Dot(6);
-            Dot dot42 = new Dot(6);
-            Dot dot43 = new Dot(6);
-            Dot dot44 = new Dot(6);
+            Button dot31 = new Button();
+            Button dot32 = new Button();
+            Button dot33 = new Button();
+            Button dot34 = new Button();
 
-            Dot dot51 = new Dot(6);
-            Dot dot52 = new Dot(6);
-            Dot dot53 = new Dot(6);
-            Dot dot54 = new Dot(6);
+            Button Checkdot31 = new Button();
+            Button Checkdot32 = new Button();
+            Button Checkdot33 = new Button();
+            Button Checkdot34 = new Button();
 
-            Dot dot61 = new Dot(6);
-            Dot dot62 = new Dot(6);
-            Dot dot63 = new Dot(6);
-            Dot dot64 = new Dot(6);
+            Button dot41 = new Button();
+            Button dot42 = new Button();
+            Button dot43 = new Button();
+            Button dot44 = new Button();
 
-            Dot dot71 = new Dot(6);
-            Dot dot72 = new Dot(6);
-            Dot dot73 = new Dot(6);
-            Dot dot74 = new Dot(6);
+            Button Checkdot41 = new Button();
+            Button Checkdot42 = new Button();
+            Button Checkdot43 = new Button();
+            Button Checkdot44 = new Button();
 
-            Dot dot81 = new Dot(6);
-            Dot dot82 = new Dot(6);
-            Dot dot83 = new Dot(6);
-            Dot dot84 = new Dot(6);
+            Button dot51 = new Button();
+            Button dot52 = new Button();
+            Button dot53 = new Button();
+            Button dot54 = new Button();
 
-            Checkdot Checkdot11 = new Checkdot(6);
-            Checkdot Checkdot12 = new Checkdot(6);
-            Checkdot Checkdot13 = new Checkdot(6);
-            Checkdot Checkdot14 = new Checkdot(6);
+            Button Checkdot51 = new Button();
+            Button Checkdot52 = new Button();
+            Button Checkdot53 = new Button();
+            Button Checkdot54 = new Button();
 
-            Checkdot Checkdot21 = new Checkdot(6);
-            Checkdot Checkdot22 = new Checkdot(6);
-            Checkdot Checkdot23 = new Checkdot(6);
-            Checkdot Checkdot24 = new Checkdot(6);
+            Button dot61 = new Button();
+            Button dot62 = new Button();
+            Button dot63 = new Button();
+            Button dot64 = new Button();
 
-            Checkdot Checkdot31 = new Checkdot(6);
-            Checkdot Checkdot32 = new Checkdot(6);
-            Checkdot Checkdot33 = new Checkdot(6);
-            Checkdot Checkdot34 = new Checkdot(6);
+            Button Checkdot61 = new Button();
+            Button Checkdot62 = new Button();
+            Button Checkdot63 = new Button();
+            Button Checkdot64 = new Button();
 
-            Checkdot Checkdot41 = new Checkdot(6);
-            Checkdot Checkdot42 = new Checkdot(6);
-            Checkdot Checkdot43 = new Checkdot(6);
-            Checkdot Checkdot44 = new Checkdot(6);
+            Button dot71 = new Button();
+            Button dot72 = new Button();
+            Button dot73 = new Button();
+            Button dot74 = new Button();
 
-            Checkdot Checkdot51 = new Checkdot(6);
-            Checkdot Checkdot52 = new Checkdot(6);
-            Checkdot Checkdot53 = new Checkdot(6);
-            Checkdot Checkdot54 = new Checkdot(6);
+            Button Checkdot71 = new Button();
+            Button Checkdot72 = new Button();
+            Button Checkdot73 = new Button();
+            Button Checkdot74 = new Button();
 
-            Checkdot Checkdot61 = new Checkdot(6);
-            Checkdot Checkdot62 = new Checkdot(6);
-            Checkdot Checkdot63 = new Checkdot(6);
-            Checkdot Checkdot64 = new Checkdot(6);
+            Button dot81 = new Button();
+            Button dot82 = new Button();
+            Button dot83 = new Button();
+            Button dot84 = new Button();
 
-            Checkdot Checkdot71 = new Checkdot(6);
-            Checkdot Checkdot72 = new Checkdot(6);
-            Checkdot Checkdot73 = new Checkdot(6);
-            Checkdot Checkdot74 = new Checkdot(6);
+            Button Checkdot81 = new Button();
+            Button Checkdot82 = new Button();
+            Button Checkdot83 = new Button();
+            Button Checkdot84 = new Button();
+            
 
-            Checkdot Checkdot81 = new Checkdot(6);
-            Checkdot Checkdot82 = new Checkdot(6);
-            Checkdot Checkdot83 = new Checkdot(6);
-            Checkdot Checkdot84 = new Checkdot(6);
-
-            buttonrows = new Object[8, 2, 4]
+            buttonrows = new Button[8, 2, 4]
             {
                 {
                     {dot11, dot12, dot13, dot14 }, {Checkdot11, Checkdot12, Checkdot13, Checkdot14 }
@@ -121,6 +122,8 @@ namespace Mastermind
                     {dot81, dot82, dot83, dot84 }, {Checkdot81, Checkdot82, Checkdot83, Checkdot84 }
                 }
             };
+
+            
 
             //int Turn = getTurn();
         }
@@ -146,7 +149,7 @@ namespace Mastermind
         }
 
 
-        public void setSequence(int turn, out object[,,] buttonrows, bool enabled, string[] guess)
+        public void setSequence(int turn, Button[,,] buttonrows, bool enabled, string[] guess)
         {
             buttonrows = this.buttonrows;
             turn = this.Turns;
@@ -155,7 +158,7 @@ namespace Mastermind
 
             for (int i = 0; i < guess.Length; i++)
             {
-                //buttonrows[turn, 0, i]; 
+                buttonrows[turn, 0, i].BackgroundImage = 
             }
         }
         public int getTurn()

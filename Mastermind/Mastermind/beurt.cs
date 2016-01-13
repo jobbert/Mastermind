@@ -20,7 +20,7 @@ namespace Mastermind
 
         
 
-        public Beurt (int turn, Form1 form) {
+        public Beurt (Form1 form) {
             Button dot11 = new Button();
             Button dot12 = new Button();
             Button dot13 = new Button();
@@ -151,11 +151,14 @@ namespace Mastermind
 
         public void setSequence(int turn, string[] guess)
         {
-            turn = this.Turns;
-            guess = this.guess;
-
+            MessageBox.Show("turn : " + turn);
+            MessageBox.Show("guess : [" + guess[0]+ ", " + guess[1] + ", " + guess[2] + ", " + guess[3] + "]");
             for (int i = 0; i < guess.Length; i++)
             {
+                MessageBox.Show("i : " + i);
+
+                string Val = guess[i];
+                //MessageBox.Show("guess[" + i + "] : " + guess[i]);
                 buttonrows[turn, 0, i].BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(guess[i]);
             }
         }

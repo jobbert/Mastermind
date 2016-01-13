@@ -19,8 +19,11 @@ namespace Mastermind
         int turn = 1;
         public string[] colorSequence = new string[4];
         public string[] randomSequence = new string[4];
+        public string[] guessArray = new string[4];
+        public string[] sequenceArray = new string[4];
         public Button[] guess = new Button[4];
         public Button[] sequence = new Button[4];
+
         //string dir = Path.GetDirectoryName(Application.ExecutablePath);
 
         public Form1()
@@ -34,6 +37,7 @@ namespace Mastermind
             sequence[1] = sequenceDot2;
             sequence[2] = sequenceDot3;
             sequence[3] = sequenceDot4;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -141,15 +145,23 @@ namespace Mastermind
         }
         private void go_Click(object sender, EventArgs e)
         {
+            Form1 form = new Form1();
+            Beurt beurt = new Beurt(form);
+
             MessageBox.Show(count.ToString());
             MessageBox.Show("colorSequence : \n" + colorSequence[0] + '\n' + colorSequence[1] + '\n' + colorSequence[2] + '\n' + colorSequence[3]);
             if (count == 4)
             {
-                count = 0;//reset the count
+                guessArray = colorSequence;
+                sequenceArray = randomSequence;
+                 count = 0;//reset the count
                 if(turn > 0 && turn < 8)
                 {
                     MessageBox.Show("randomSequence : \n" + randomSequence[0] + '\n' + randomSequence[1] + '\n' + randomSequence[2] + '\n' + randomSequence[3]);
                     Check Check = new Check(colorSequence, randomSequence);
+
+                    MessageBox.Show("colorSequence : [" + colorSequence[0] + ", " + colorSequence[1] + ", " + colorSequence[2] + ", " + colorSequence[3] + "]");
+                    beurt.setSequence(turn, colorSequence);
 
                     MessageBox.Show(turn.ToString());
                     for (int i = 0; i < 4; i++)
@@ -161,9 +173,7 @@ namespace Mastermind
                     //dit moet zoiets worden
                     //Beurt setSequence = new Beurt(turn, guess);
 
-                    Form1 form = new Form1();
-                    Beurt beurt = new Beurt(turn, form);
-                    beurt.setSequence(turn, colorSequence);
+
 
                     turn++;
                 }

@@ -146,16 +146,18 @@ namespace Mastermind
         }
 
 
-        public void setSequence(int turn, out object[,,] buttonrows, bool enabled, string[] guess) {
+        public void setSequence(int turn, out object[,,] buttonrows, bool enabled, string[] guess)
+        {
             buttonrows = this.buttonrows;
             turn = this.Turns;
             enabled = this.enabled;
             guess = this.guess;
 
-            for (int i = 0; i < guess.Length; i++) {
+            for (int i = 0; i < guess.Length; i++)
+            {
                 //buttonrows[turn, 0, i]; 
             }
-
+        }
         public int getTurn()
         {
             return Turns;

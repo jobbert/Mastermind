@@ -159,6 +159,7 @@ namespace Mastermind
                 buttonrows[turn, 0, i].BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(guess[i]);
             }
         }
+
         public int getTurn()
         {
             return Turns;

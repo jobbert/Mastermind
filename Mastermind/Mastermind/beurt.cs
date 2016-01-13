@@ -149,16 +149,14 @@ namespace Mastermind
         }
 
 
-        public void setSequence(int turn, Button[,,] buttonrows, bool enabled, string[] guess)
+        public void setSequence(int turn, string[] guess)
         {
-            buttonrows = this.buttonrows;
             turn = this.Turns;
-            enabled = this.enabled;
             guess = this.guess;
 
             for (int i = 0; i < guess.Length; i++)
             {
-                buttonrows[turn, 0, i].BackgroundImage = 
+                buttonrows[turn, 0, i].BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(guess[i]);
             }
         }
         public int getTurn()

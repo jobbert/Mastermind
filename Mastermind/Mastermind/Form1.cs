@@ -149,7 +149,7 @@ namespace Mastermind
                 if(turn > 0 && turn < 8)
                 {
                     MessageBox.Show("randomSequence : \n" + randomSequence[0] + '\n' + randomSequence[1] + '\n' + randomSequence[2] + '\n' + randomSequence[3]);
-                    Check check = new Check(colorSequence, randomSequence);
+                    Check Check = new Check(colorSequence, randomSequence);
 
                     MessageBox.Show(turn.ToString());
                     for (int i = 0; i < 4; i++)
@@ -158,12 +158,14 @@ namespace Mastermind
                         //colorSequence[i] = null;//reset the colorSequence array
                         guess[i].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.hole));//reset the guess array
                     }
+                    //dit moet zoiets worden
+                    //Beurt setSequence = new Beurt(turn, guess);
                     turn++;
                 }
                 if (turn == 8)
                 {
-                    Check check = new Check(colorSequence, randomSequence);
-                    int p = check.getScore();
+                    Check Check = new Check(colorSequence, randomSequence);
+                    int p = Check.getScore();
                     if (p == 4)
                     {
                         MessageBox.Show("you win!");
@@ -175,10 +177,10 @@ namespace Mastermind
                     turn = 0;
                 }
             }
-            Check check = new Check(colorSequence, randomSequence);
+            //Check check = new Check(colorSequence, randomSequence);
 
 
-            turn++;
+            //turn++;
         }
     }
 }

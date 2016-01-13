@@ -160,6 +160,7 @@ namespace Mastermind
                     }
                     //dit moet zoiets worden
                     //Beurt setSequence = new Beurt(turn, guess);
+                    Beurt beurt = new Beurt();
                     turn++;
                 }
                 if (turn == 8)

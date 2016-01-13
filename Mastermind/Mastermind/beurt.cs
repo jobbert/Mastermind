@@ -20,7 +20,7 @@ namespace Mastermind
 
         
 
-        public Beurt (int turn, bool enabled, Form1 form) {
+        public Beurt (int turn, Form1 form) {
             Button dot11 = new Button();
             Button dot12 = new Button();
             Button dot13 = new Button();

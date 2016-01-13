@@ -160,7 +160,11 @@ namespace Mastermind
                     }
                     //dit moet zoiets worden
                     //Beurt setSequence = new Beurt(turn, guess);
-                    Beurt beurt = new Beurt();
+
+                    Form1 form = new Form1();
+                    Beurt beurt = new Beurt(turn, form);
+                    beurt.setSequence(turn, colorSequence);
+
                     turn++;
                 }
                 if (turn == 8)

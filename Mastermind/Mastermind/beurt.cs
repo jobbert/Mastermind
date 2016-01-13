@@ -17,10 +17,11 @@ namespace Mastermind
 
         public string[] sequence = new string[4];
         public string[] guess = new string[4];
+        Object[,,] buttonrows;
 
-        
-        
-        public Beurt (int turn)
+
+
+        public Beurt (int turn, bool enabled)
         {
             Dot dot11 = new Dot(6);
             Dot dot12 = new Dot(6);
@@ -102,7 +103,7 @@ namespace Mastermind
             Checkdot Checkdot83 = new Checkdot(6);
             Checkdot Checkdot84 = new Checkdot(6);
 
-            Object[,,] buttonrows = new Object[8, 2, 4]
+            buttonrows = new Object[8, 2, 4]
             {
                 {
                     {dot11, dot12, dot13, dot14 }, {Checkdot11, Checkdot12, Checkdot13, Checkdot14 }
@@ -135,18 +136,15 @@ namespace Mastermind
             turns++;
         }
 
-        public void setSequence() {
-            guess[0] = "black.png";
-            guess[1] = "blue.png";
-            guess[2] = "green.png";
-            guess[3] = "yellow.png";
+        public void setSequence(int turn, out object[,,] buttonrows, bool enabled, string[] guess) {
+            buttonrows = this.buttonrows;
+            turn = this.turns;
+            enabled = this.enabled;
+            guess = this.guess;
 
-            sequence[0] = "black.png";
-            sequence[1] = "blue.png";
-            sequence[2] = "green.png";
-            sequence[3] = "yellow.png";
-
-            
+            for (int i = 0; i < guess.Length; i++) {
+                buttonrows[]
+            }
 
         }
     }

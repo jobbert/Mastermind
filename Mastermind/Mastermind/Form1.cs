@@ -14,8 +14,8 @@ namespace Mastermind
     public partial class Form1 : Form
     {
         Kleur color;
-        int count = 1;
-        int turn;
+        int count = 0;
+        int turn = 1;
         public string[] colorSequence = new string[4];
         public string[] randomSequence = new string[4];
         public Button[] guess = new Button[4];
@@ -148,13 +148,11 @@ namespace Mastermind
                 }
                 count = 0;//reset the count
             }
-
-            Beurt beurt = new Beurt(turn);
-
-            turn = beurt.getTurn();
-            MessageBox.Show(turn.ToString());
-
             Check check = new Check(colorSequence, randomSequence);
+
+            turn++;
+
+            
         }
         //////////////////////////////
         //////////////////////////////

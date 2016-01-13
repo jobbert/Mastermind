@@ -14,7 +14,11 @@ namespace Mastermind
     public partial class Form1 : Form
     {
         Kleur color;
+<<<<<<< HEAD
         int count = 0;
+=======
+        int count;
+>>>>>>> c37a35f3b60f77284062175dae6f03ae3b2cf8ec
         int turn = 1;
         public string[] colorSequence = new string[4];
         public string[] randomSequence = new string[4];
@@ -37,8 +41,30 @@ namespace Mastermind
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //setRandomSequence();
+            var random = new Random();
+            for (int i = 0; i < 4; i++)
+            {
+                int randomInt = random.Next(6);
+                color = new Kleur(randomInt);
+                randomSequence[i] = color.getColor();
+                string val = randomSequence[i];
+                sequence[i].BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(val);
+            }
         }
+        //public Array setRandomSequence()
+        //{
+        //    var random = new Random();
+        //    for (int i = 0; i < 4; i++)
+        //    {
+        //        int randomInt = random.Next(6);
+        //        color = new Kleur(randomInt);
+        //        randomSequence[i] = color.getColor();
+        //        string val = randomSequence[i];
+        //        sequence[i].BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(val);
+        //    }
+        //    return randomSequence;
+        //}
         /*
         private void alert(int count, string colorSequence)
         {
@@ -116,45 +142,50 @@ namespace Mastermind
             guess[count].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.yellow));
             count++;
         }
-        //////////////////////////////
-        ///* for testing purposes *///
         private void go_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(count.ToString());
             MessageBox.Show("colorSequence : \n" + colorSequence[0] + '\n' + colorSequence[1] + '\n' + colorSequence[2] + '\n' + colorSequence[3]);
-            var random = new Random();
-            for (int i = 0; i < 4; i++)
-            {
-                int randomInt = random.Next(6);
-                color = new Kleur(randomInt);
-                randomSequence[i] = color.getColor();
-                string val = randomSequence[i];
-                sequence[i].BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(val);
-                MessageBox.Show("randomSequence : \n" + randomSequence[0] + '\n' + randomSequence[1] + '\n' + randomSequence[2] + '\n' + randomSequence[3]);
-                //if (i == 3)
-                //{
-                //    for (int x = 0; x < 4; x++)
-                //    {
-                //        randomSequence[x] = null;//reset the colorSequence array
-                //    }
-                //}
-            }
             if (count == 4)
             {
-                for (int i = 0; i < 4; i++)
-                {
-                    //before the next line runs the sequence needs to be transfered to its fixed turn position and its checkDots need to be filled
-                    colorSequence[i] = null;//reset the colorSequence array
-                    guess[i].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.hole));//reset the guess array
-                }
                 count = 0;//reset the count
+                if(turn > 0 && turn < 8)
+                {
+                    MessageBox.Show("randomSequence : \n" + randomSequence[0] + '\n' + randomSequence[1] + '\n' + randomSequence[2] + '\n' + randomSequence[3]);
+                    Check check = new Check(colorSequence, randomSequence);
+
+                    MessageBox.Show(turn.ToString());
+                    for (int i = 0; i < 4; i++)
+                    {
+                        //before the next line runs the sequence needs to be transfered to its fixed turn position and its checkDots need to be filled
+                        //colorSequence[i] = null;//reset the colorSequence array
+                        guess[i].BackgroundImage = ((System.Drawing.Image)(Properties.Resources.hole));//reset the guess array
+                    }
+                    turn++;
+                }
+                if (turn == 8)
+                {
+                    Check check = new Check(colorSequence, randomSequence);
+                    int p = check.getScore();
+                    if (p == 4)
+                    {
+                        MessageBox.Show("you win!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("you lose!");
+                    }
+                    turn = 0;
+                }
             }
             Check check = new Check(colorSequence, randomSequence);
 
+<<<<<<< HEAD
             turn++;
 
             
+=======
+>>>>>>> c37a35f3b60f77284062175dae6f03ae3b2cf8ec
         }
-        //////////////////////////////
-        //////////////////////////////
     }
 }

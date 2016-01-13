@@ -11,10 +11,11 @@ namespace Mastermind
     class Beurt
     {
         bool enabled;
-        int turns;
-        Form1 form = new Form1();
+        int Turns;
+        //Form1 form = new Form1();
         
 
+<<<<<<< HEAD
         public string[] sequence = new string[4];
         public string[] guess = new string[4];
         Object[,,] buttonrows;
@@ -22,6 +23,14 @@ namespace Mastermind
 
 
         public Beurt (int turn, bool enabled)
+=======
+        //public string[] sequence = new string[4];
+        //public string[] guess = new string[4];
+
+        
+        
+        public Beurt ()
+>>>>>>> c37a35f3b60f77284062175dae6f03ae3b2cf8ec
         {
             Dot dot11 = new Dot(6);
             Dot dot12 = new Dot(6);
@@ -97,7 +106,7 @@ namespace Mastermind
             Checkdot Checkdot72 = new Checkdot(6);
             Checkdot Checkdot73 = new Checkdot(6);
             Checkdot Checkdot74 = new Checkdot(6);
-       
+
             Checkdot Checkdot81 = new Checkdot(6);
             Checkdot Checkdot82 = new Checkdot(6);
             Checkdot Checkdot83 = new Checkdot(6);
@@ -124,18 +133,30 @@ namespace Mastermind
                 }
             };
 
-            turn = getTurn();
+            //int Turn = getTurn();
         }
-        public int getTurn() {
-            setTurn(turns);
-            return turns;
+        //public int getTurn() {
+        //    setTurn(turns);
+        //    return turns;
+        //}
+
+        //public void setTurn(int turn) {
+        //    this.turns = turn;
+        //    turns++;
+        //    return turns;
+        //}
+        //public Turn()
+        //{
+        //    setTurn();
+        //}
+
+        public int setTurn()
+        {
+            Turns++;
+            return Turns;
         }
 
-        public void setTurn(int turn) {
-            this.turns = turn;
-            turns++;
-        }
-
+<<<<<<< HEAD
         public void setSequence(int turn, out object[,,] buttonrows, bool enabled, string[] guess) {
             buttonrows = this.buttonrows;
             turn = this.turns;
@@ -146,6 +167,11 @@ namespace Mastermind
                 buttonrows[]
             }
 
+=======
+        public int getTurn()
+        {
+            return Turns;
+>>>>>>> c37a35f3b60f77284062175dae6f03ae3b2cf8ec
         }
     }
 }

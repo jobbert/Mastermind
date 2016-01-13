@@ -9,11 +9,16 @@ namespace Mastermind
 {
     class Check
     {
+        int p = 0;
+        int c = 0;
         //public string[] guess = new string[4];
         //public string[] sequence = new string[4];
 
         public Check(string[] guess, string[] sequence)
         {
+            string[] guessableSequence = sequence;
+            MessageBox.Show("guess : \n" + guess[0] + '\n' + guess[1] + '\n' + guess[2] + '\n' + guess[3]);
+            MessageBox.Show("sequence : \n" + guessableSequence[0] + '\n' + guessableSequence[1] + '\n' + guessableSequence[2] + '\n' + guessableSequence[3]);
             //guess[0] = "black.png";
             //guess[1] = "blue.png";
             //guess[2] = "green.png";
@@ -24,15 +29,13 @@ namespace Mastermind
             //sequence[2] = "green.png";
             //sequence[3] = "blue.png";
 
-            int p = 0;
-            int c = 0;
 
             for (int i = 0; i < guess.Length; i++)
             {
                 if (guess[i] == sequence[i] && sequence[i] != null)
                 {
-                    MessageBox.Show(guess[i].ToString());
-                    MessageBox.Show(sequence[i].ToString());
+                    //MessageBox.Show(guess[i].ToString());
+                    //MessageBox.Show(sequence[i].ToString());
                     guess[i] = null;
                     sequence[i] = null;
                     p++;
@@ -52,12 +55,18 @@ namespace Mastermind
                 }
                 //MessageBox.Show("c = " + c.ToString());
             }
+            getScore();
             MessageBox.Show
             (
                 "p = " + p.ToString()
                 + "\n" +
                 "c = " + c.ToString()
             );
+
+        }
+        public int getScore()
+        {
+            return p;
         }
     }
 }

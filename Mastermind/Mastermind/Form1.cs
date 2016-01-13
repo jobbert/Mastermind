@@ -14,11 +14,8 @@ namespace Mastermind
     public partial class Form1 : Form
     {
         Kleur color;
-<<<<<<< HEAD
+
         int count = 0;
-=======
-        int count;
->>>>>>> c37a35f3b60f77284062175dae6f03ae3b2cf8ec
         int turn = 1;
         public string[] colorSequence = new string[4];
         public string[] randomSequence = new string[4];
@@ -180,12 +177,8 @@ namespace Mastermind
             }
             Check check = new Check(colorSequence, randomSequence);
 
-<<<<<<< HEAD
-            turn++;
 
-            
-=======
->>>>>>> c37a35f3b60f77284062175dae6f03ae3b2cf8ec
+            turn++;
         }
     }
 }

@@ -14,24 +14,13 @@ namespace Mastermind
         int Turns;
         //Form1 form = new Form1();
         
-
-<<<<<<< HEAD
         public string[] sequence = new string[4];
         public string[] guess = new string[4];
         Object[,,] buttonrows;
 
 
 
-        public Beurt (int turn, bool enabled)
-=======
-        //public string[] sequence = new string[4];
-        //public string[] guess = new string[4];
-
-        
-        
-        public Beurt ()
->>>>>>> c37a35f3b60f77284062175dae6f03ae3b2cf8ec
-        {
+        public Beurt (int turn, bool enabled) {
             Dot dot11 = new Dot(6);
             Dot dot12 = new Dot(6);
             Dot dot13 = new Dot(6);
@@ -156,22 +145,21 @@ namespace Mastermind
             return Turns;
         }
 
-<<<<<<< HEAD
+
         public void setSequence(int turn, out object[,,] buttonrows, bool enabled, string[] guess) {
             buttonrows = this.buttonrows;
-            turn = this.turns;
+            turn = this.Turns;
             enabled = this.enabled;
             guess = this.guess;
 
             for (int i = 0; i < guess.Length; i++) {
-                buttonrows[]
+                //buttonrows[turn, 0, i]; 
             }
 
-=======
         public int getTurn()
         {
             return Turns;
->>>>>>> c37a35f3b60f77284062175dae6f03ae3b2cf8ec
+
         }
     }
 }
